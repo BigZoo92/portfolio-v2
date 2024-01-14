@@ -1,0 +1,15 @@
+// COLORS
+$color-1: #b98fe6;
+$color-2: #ecdbec;
+$color-3: #85e6c5;
+$color-4: #fff8ef;
+$color-black: #221e1b;
+$color-white: #fff8ef;
+
+// FONTS
+$font-common: 'JetBrains Mono', monospace;
+$font-title: 'Micronian 3D', sans-serif;
+
+// MARGES AND SIZES
+$marge: clamp(15px, calc(1vw + 0.35rem), 25px);
+$width: clamp(350px, 90vw, 2000px);
