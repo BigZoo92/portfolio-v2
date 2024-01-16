@@ -4,10 +4,7 @@
 
 html,
 body {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
   width: 100%;
-  min-height: 100dvh;
 }
 
 body {
@@ -19,11 +16,12 @@ body {
 
 main {
   width: 100%;
-  min-height: 100dvh;
+  height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: absolute;
 }
 
 ::-moz-selection {
