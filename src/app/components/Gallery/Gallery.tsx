@@ -38,12 +38,27 @@ const Gallery = ({images} : {images: string[]}) => {
         });
         gsap.set(`#cd_image${isExtended}`, {
             transition: 'height cubic-bezier(0.15, 0.01, 0.15, 0.99) .15s',
+            zIndex: 1000,
         });
         gsap.to(`#cd_image${isExtended}`, {
             duration: 0.75,
             x: (extendedImage.getBoundingClientRect().left * -1) + 25,
             width: 'calc(100dvw - 50px)',
             height: 'calc(50dvh - 50px)',
+            onStart: () => {
+                gsap.to(`.cd_image`, {
+                    opacity: 0,
+                });
+                gsap.to(`h1`, {
+                    opacity: 0,
+                });
+                gsap.to(`.name_project`, {
+                    opacity: 0,
+                });
+                gsap.to(`#cd_image${isExtended}`, {
+                    opacity: 1,
+                });
+            },
             onComplete: () => {
                 gsap.to(`#cd_image${isExtended}`, {
                     duration: 0.5,
