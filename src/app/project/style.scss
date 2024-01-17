@@ -1,0 +1,19 @@
+@import '../sass/_variables.scss';
+
+
+.project{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img{
+        object-fit: cover;
+        position: absolute;
+        top: $marge + 75px;
+        left: $marge;
+        width: calc(100dvw - calc($marge * 2));
+        height: calc(50dvh - calc($marge * 2));
+    }
+}

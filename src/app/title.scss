@@ -1,0 +1,52 @@
+@import './sass/_variables.scss';
+
+.title{
+    font-size: clamp(2rem, 15vw, 16rem);
+    mix-blend-mode: difference;
+    position: fixed;
+    font-weight: 900;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    .word{
+        overflow: hidden;
+        display: flex;
+        div{
+            animation: revealTitle 0.75s cubic-bezier(0.15, 0.01, 0.15, 0.99) forwards;
+            transform: translateY(100%);
+               
+        }
+        &:nth-child(1){
+            div{
+                color: $color-1;
+                @for $i from 1 through 3 { // Remplacez 5 par le nombre de div que vous avez
+                    &:nth-child(#{$i}) {
+                        animation-delay: 2s + 0.05s * $i; // Chaque div a un délai supplémentaire de 0.2s
+                    }
+                }
+            }
+        }
+        &:nth-child(2){
+            div{
+                @for $i from 1 through 9 { // Remplacez 5 par le nombre de div que vous avez
+                    &:nth-child(#{$i}) {
+                        animation-delay: 2.15s + 0.05s * $i; // Chaque div a un délai supplémentaire de 0.2s
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@keyframes revealTitle {
+    from {
+      transform: translateY(100%);
+    }
+  
+    to {
+        transform: translateY(0);
+    }
+  }

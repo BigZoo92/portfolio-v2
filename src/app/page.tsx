@@ -1,6 +1,9 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import Gallery from "./components/Gallery";
+import Overlay from "./components/Overlay";
+import './title.scss'
+import { Postertoastermono } from "./layout";
 
 export default function Home() {
   const images = [
@@ -12,8 +15,17 @@ export default function Home() {
     '/images/image-2.webp',
   ];
   return (
-    <section className='gallery'>
+    <>
       <Gallery images={images}/>
-    </section>
+      <h1 className={`title`}>
+          <div className="word">
+            <div>w</div><div>e</div><div>b</div>
+          </div>
+          <div className="word">
+            <div>d</div><div>e</div><div>v</div><div>e</div><div>l</div><div>o</div><div>p</div><div>e</div><div>r</div>
+          </div>
+        </h1>
+      <Overlay></Overlay>
+    </>
   );      
 }

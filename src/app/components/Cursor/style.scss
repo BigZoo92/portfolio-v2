@@ -1,0 +1,10 @@
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    position: fixed;
+    pointer-events: none; /* Très important pour éviter que le curseur ne bloque les événements de clic */
+    z-index: 1000;
+  }
+  

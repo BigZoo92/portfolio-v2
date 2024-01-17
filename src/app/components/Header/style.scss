@@ -1,0 +1,53 @@
+@import '../../sass/_variables.scss';
+
+header{
+    width: 100dvw;
+    height: 75px;
+    z-index: 998;
+    position: fixed;
+    inset: 0;
+    font-size: clamp(1rem, 3vw, 2rem) !important;
+    nav{
+        display: flex;
+        padding: $marge;
+        justify-content: space-between;
+        align-items: center;
+        ul{
+            display: flex;
+            justify-content: center;
+            gap: $marge;
+            align-items: center;
+            li{
+                cursor: pointer;
+                &:nth-of-type(2){
+                    border: 2px solid $color-1;
+                    border-radius: $border-radius;
+                    padding: calc($marge / 2);
+                    font-weight: 600;
+                    color: $color-1;
+                    transition: background-color .3s ease,
+                                color .3s ease;
+                    &:hover{
+                        color: $color-black;
+                        background-color: $color-1;
+                    }
+                }
+            }
+        }
+        a, li{
+            clip-path: inset(0 100% 0 0);
+            animation: revealLink .5s 2.25s cubic-bezier(0.15, 0.01, 0.15, 0.99) forwards;
+        }
+    }
+    
+}
+
+@keyframes revealLink {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+  
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+  }

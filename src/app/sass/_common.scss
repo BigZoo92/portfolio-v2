@@ -4,14 +4,21 @@
 
 html,
 body {
-  width: 100%;
+  width: 100dvw;
 }
 
 body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  background: rgb(10, 10, 10);
+  color: white;
+ 
   font-size: clamp(15px, 0.75vw, 18px);
+}
+
+a{
+  color: white;
 }
 
 main {
@@ -25,11 +32,11 @@ main {
 }
 
 ::-moz-selection {
-  color: $color-1 !important;
+  color: $color-2 !important;
   background: transparent !important;
 }
 
 ::selection {
-  color: $color-1 !important;
+  color: $color-2 !important;
   background: transparent !important;
 }

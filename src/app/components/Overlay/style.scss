@@ -1,0 +1,22 @@
+@import '../../sass/_variables.scss';
+
+.overlay{
+    position: fixed;
+    inset: 0;
+    height: 120dvh;
+    width: 100dvw;
+    background-color: $color-1;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    z-index: 999;
+    animation: reveal 1.5s 1s cubic-bezier(0.15, 0.01, 0.15, 0.99) forwards;
+}
+
+@keyframes reveal {
+    from {
+      transform: translateY(0);
+    }
+  
+    to {
+        transform: translateY(-120dvh);
+    }
+  }

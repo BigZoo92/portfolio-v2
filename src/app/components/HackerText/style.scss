@@ -1,0 +1,30 @@
+@import '../../sass/_variables.scss';
+
+.name_project{
+    position: fixed;
+    bottom: calc($marge * 6);
+    z-index: 998;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: max-content;
+    border-radius: $border-radius;
+    justify-content: center;
+    align-items: center;
+    gap: $marge;
+    font-weight: 500;
+    font-size: clamp(2rem, 5vw, 5rem);
+    background-color: black;
+    padding: $marge;
+    cursor: pointer;
+    transition: all .3s ease;
+    .red{
+        color: $color-1;
+    }
+    &:hover{
+        color: $color-1;
+        .red{
+            color: white;
+        }
+    }
+}
