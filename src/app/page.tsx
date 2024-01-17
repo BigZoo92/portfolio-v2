@@ -3,7 +3,6 @@ import { Suspense } from "react";
 import Gallery from "./components/Gallery";
 import Overlay from "./components/Overlay";
 import './title.scss'
-import { Postertoastermono } from "./layout";
 
 export default function Home() {
   const images = [
